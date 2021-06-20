@@ -8,6 +8,17 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  TextEditingController _searchTextController = TextEditingController();
+  String _informationString = "";
+  String _onChangedString = "";
+  String _resultString = "";
+
+  @override
+    void initState() {
+      _informationString = "Set state example";
+      super.initState();
+    }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,6 +32,8 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          _informationLabel(),
+          SizedBox(height: 40,),
           _onChangedLabel(),
           SizedBox(height: 40,),
           _resultLabel(),
@@ -32,18 +45,25 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+  Widget _informationLabel(){
+    return Text(_informationString);
+  }
+
   Widget _onChangedLabel(){
-    return Text("OnChanged");
+    return Text(_onChangedString);
   }
 
   Widget _resultLabel(){
-    return Text("Result");
+    return Text(_resultString);
   }
 
   Widget _searchTextField(){
     return TextField(
+      controller: _searchTextController,
       onChanged: (text) {
-
+        setState(() {
+          _onChangedString = text; 
+        });
       },
     ); 
   }
@@ -51,7 +71,9 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget _searchButton(){
     return ElevatedButton(
       onPressed: () {
-
+        setState(() {
+          _resultString = _searchTextController.text;
+        });
       }, 
       child: Text("Go")
     );
