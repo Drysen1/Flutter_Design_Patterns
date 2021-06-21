@@ -16,6 +16,8 @@ Planned design patterns:
 - MVVM with provider
 - BLoC with streams
 
+![alt text](https://github.com/Drysen1/Flutter_Design_Patterns/blob/main/screenshots/design_pattern_ui.png)
+
 ## Getting Started
 
 A few resources to get you started if this is your first Flutter project:
