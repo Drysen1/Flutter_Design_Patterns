@@ -16,6 +16,9 @@ Planned design patterns:
 - MVVM with provider
 - BLoC with streams
 
+## Description
+All examples have the same layout as can be seen in the screenshot below. All examples will react on text changed and on button press to display the text value that is in the textfield. This will be handled differently depending on the design pattern of course as is the purpose of this repository.
+
 ![alt text](https://github.com/Drysen1/Flutter_Design_Patterns/blob/main/screenshots/design_pattern_ui.png)
 
 ## Getting Started
