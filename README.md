@@ -4,17 +4,17 @@ This is a repository to showcase different design patterns that are possible whi
 Flutter and Dart is very versitile on how we can structure our projects and what type of design patterns we can implement.
 The examples in this repository is barebone and basic just to be able to quickly showcase how one could implement these different design patterns.
 
-Currently there are three examples in this repository.
+Currently there are four examples in this repository.
 
 Current design patterns:
 - Set State 
 - MVP (Model View Presenter)
 - MVVM (Model View Viewmodel) using sinks and streams
+- BLoC (Business Logic Component) using functions.
 
 Planned design patterns:
 - MVVM with provider
 - BLoC with streams
-- BLoC using functions.
 
 ## Getting Started
 
