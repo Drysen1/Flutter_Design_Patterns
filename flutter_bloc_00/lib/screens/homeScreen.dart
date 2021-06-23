@@ -51,11 +51,13 @@ class _HomeScreenState extends State<HomeScreen> {
         return Text(text);
       }
     );
-    // return Text("");
   }
 
   Widget _resultLabel(){
     return BlocBuilder<HomeBloc, HomeState>(
+      buildWhen: (oldState, newState){
+        return newState is ButtonPressedState;
+      },
       builder: (context, state) {
         var text = "";
         if(state is ButtonPressedState){
